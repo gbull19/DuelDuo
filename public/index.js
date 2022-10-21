@@ -180,6 +180,10 @@ const getAllBots = () => {
 
 const resetRecord = () => {
     axios.get('/api/reset')
+        .then(({data: {wins, losses}}) => {
+            winsText.textContent = `Wins: ${wins}`
+            lossesTest.textContent = `Losses: ${losses}`
+    })
 }
 
 drawBtn.addEventListener('click', drawFive)
