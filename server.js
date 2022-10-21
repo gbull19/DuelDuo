@@ -12,7 +12,7 @@ app.use(express.static('public'));
 const {ACCESS_TOKEN} = process.env;
 let Rollbar = require('rollbar');
 let rollbar = new Rollbar({
-  accessToken: `${ACCESS_TOKEN}`;
+  accessToken: `${ACCESS_TOKEN}`,
   captureUncaught: true,
   captureUnhandledRejections: true,
 });
