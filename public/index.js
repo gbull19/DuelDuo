@@ -192,5 +192,6 @@ duelBtn.addEventListener('click', duel)
 playAgainBtn.addEventListener('click', reset)
 seeAllBtn.addEventListener('click', getAllBots)
 resetBtn.addEventListener('click', resetRecord)
+allBotsDiv.addEventListener('click', () => allBotsDiv.innerHTML = '')
 
 getPlayerStats()
