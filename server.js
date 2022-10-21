@@ -107,10 +107,8 @@ app.get('/api/player', (req, res) => {
 
 app.get('/api/reset', (req, res) => {
     try {
-        playerRecord = {
-            wins: 0, 
-            losses: 0
-        }
+        playerRecord.wins = 0;
+        playerRecord.losses = 0;
         res.status(200).send(playerRecord)
     } catch (error) {
         rollbar.error('Error Getting Player Stats')
