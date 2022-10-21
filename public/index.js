@@ -156,6 +156,7 @@ const reset = () => {
     renderPlayerDuo()
     drawBtn.classList.remove('hide')
     compDuoHeader.classList.add('hide')
+    drawFive() // DRAW
 }
 
 const getPlayerStats = () => {
