@@ -106,15 +106,9 @@ app.get('/api/player', (req, res) => {
 })
 
 app.get('/api/reset', (req, res) => {
-    try {
         playerRecord.wins = 0;
         playerRecord.losses = 0;
-        res.status(200).send(playerRecord)
-    } catch (error) {
-        rollbar.error('Error Getting Player Stats')
-        console.log('ERROR GETTING PLAYER STATS', error)
-        res.sendStatus(400)
-    }
+        res.status(200).send(playerRecord);
 })
 
 const port = process.env.PORT || 3000
